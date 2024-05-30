@@ -1,0 +1,50 @@
+@use "../abstract/" as*;
+.header{
+    i {
+        cursor: pointer;
+    }
+    
+    ul.open{
+        visibility: visible;
+        opacity: 1;
+        
+    }
+    ul{
+        @include mediaQuery{
+            position: static;
+            background-color: unset;
+            padding: unset;
+            width:auto;
+            height: unset;
+            flex-direction: row;
+            visibility: visible;
+            opacity: 1;
+            
+        }
+        position: fixed;
+        background: black;
+        top: 5rem;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 9999;
+        flex-direction: column;
+        padding-top: 20%;
+        // justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: .5 ease;
+
+        
+
+        li{
+            // margin-left: 50%;
+            // transform: translateX(-50%);
+            text-align: center;
+            a{
+                font-size: 3rem;
+            }
+        }
+    }
+}
